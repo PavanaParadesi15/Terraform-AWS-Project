@@ -18,3 +18,15 @@ variable "public_subnet_cidr_block" {
 variable "private_subnet_cidr_block" {
   description = "The CIDR block for the subnet."
 }
+
+variable "aws_s3_bucket" {
+  description = "The name of the S3 bucket"
+}
+
+variable "ec2_instance_ami" {
+  description = "EC2 instance AMI"
+}
+
+variable "ec2_instance_type" {
+  description = "The type of EC2 instance to launch."
+}
