@@ -94,10 +94,10 @@ resource "aws_s3_bucket" "my_bucket" {
 
 // Access Control List (ACL) of an Amazon S3 bucket. 
 resource "aws_s3_bucket_acl" "example" {
-  depends_on = [
-    aws_s3_bucket_ownership_controls.example,
-    aws_s3_bucket_public_access_block.example
-]
+#   depends_on = [
+#     aws_s3_bucket_ownership_controls.example,
+#     aws_s3_bucket_public_access_block.example
+# ]
 
   bucket = aws_s3_bucket.example.id
   acl    = "public-read"
