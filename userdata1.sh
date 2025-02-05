@@ -4,6 +4,7 @@ apt install -y apache2
 
 # Get the instance ID using the instance metadata
 INSTANCE_ID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
+echo "Instance ID: $INSTANCE_ID"
 
 # Install the AWS CLI
 apt install -y awscli
@@ -20,9 +21,9 @@ cat <<EOF > /var/www/html/index.html
   <style>
     /* Add animation and styling for the text */
     @keyframes colorChange {
-      0% { color: red; }
+      0% { color: yellow; }
       50% { color: green; }
-      100% { color: blue; }
+      100% { color: black; }
     }
     h1 {
       animation: colorChange 2s infinite;
@@ -30,9 +31,9 @@ cat <<EOF > /var/www/html/index.html
   </style>
 </head>
 <body>
-  <h1>Terraform Project Server 1</h1>
+  <h1>Terraform Project Server 2</h1>
   <h2>Instance ID: <span style="color:green">$INSTANCE_ID</span></h2>
-  <p>Welcome to CloudChamp's Channel</p>
+  <p>Welcome to My Web page</p>
   
 </body>
 </html>
