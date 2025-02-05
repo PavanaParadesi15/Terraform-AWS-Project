@@ -1,1 +1,12 @@
-
+vpc_cidr_block = 
+region = 
+public_subnet_cidr_block = 
+private_subnet_cidr_block = 
+public_subnet_az = 
+private_subnet_az = 
+aws_s3_bucket = 
+ec2_instance_ami = 
+ec2_instance_type = 
+load_balancer_name = 
+load_balancer_type = 
+aws_lb_target_group_name =
