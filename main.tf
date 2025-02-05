@@ -108,7 +108,7 @@ resource "aws_instance" "webserver-1" {
   instance_type = var.ec2_instance_type
   subnet_id     = aws_subnet.public_subnet.id
   security_groups = [aws_security_group.my-sg.id]
-  key_name = "my-keypair"
+  key_name = "my_keypair"
   user_data = base64encode(file("userdata.sh"))
   tags = {
     Name = "webserver-1"
@@ -121,7 +121,7 @@ resource "aws_instance" "webserver-2" {
   instance_type = var.ec2_instance_type
   subnet_id     = aws_subnet.private_subnet.id
   security_groups = [aws_security_group.my-sg.id]
-  key_name = "my-keypair"
+  key_name = "my_keypair"
   user_data = base64encode(file("userdata1.sh"))
   tags = {
     Name = "webserver-2"
