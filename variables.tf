@@ -30,3 +30,15 @@ variable "ec2_instance_ami" {
 variable "ec2_instance_type" {
   description = "The type of EC2 instance to launch."
 }
+
+variable "load_balancer_name" {
+  description = "Name of the load balancer"
+}
+
+variable "load_balancer_type" {
+  description = "Type of the load balancer"
+}
+
+variable "aws_lb_target_group_name" {
+  description = "Name of the target group"
+}

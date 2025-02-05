@@ -17,3 +17,10 @@ output "public-ip-address" {
   value = aws_instance.webserver-1.public_ip
 }
 
+output "public-ip-address-2" {
+  value = aws_instance.webserver-2.public_ip
+}
+
+output "load_balancer_dns" {
+  value = aws_lb.my-load-balancer.dns_name
+}
