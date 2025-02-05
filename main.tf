@@ -86,22 +86,21 @@ resource "aws_security_group" "my-sg" {
 // Create S3 bucket
 resource "aws_s3_bucket" "my_bucket" {
   bucket = var.aws_s3_bucket
-  region = var.region
   tags = {
     Name = "my_bucket"
   }
 }
 
 // Access Control List (ACL) of an Amazon S3 bucket. 
-resource "aws_s3_bucket_acl" "example" {
-#   depends_on = [
-#     aws_s3_bucket_ownership_controls.example,
-#     aws_s3_bucket_public_access_block.example
-# ]
+# resource "aws_s3_bucket_acl" "example" {
+# #   depends_on = [
+# #     aws_s3_bucket_ownership_controls.example,
+# #     aws_s3_bucket_public_access_block.example
+# # ]
 
-  bucket = aws_s3_bucket.example.id
-  acl    = "public-read"
-}
+#   bucket = aws_s3_bucket.my_bucket.bucket
+#   acl    = "public-read"
+# }
 
 // Create EC2 instance
 resource "aws_instance" "webserver-1" {

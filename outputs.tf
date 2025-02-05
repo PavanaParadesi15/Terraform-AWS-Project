@@ -14,5 +14,6 @@ output "private_subnet_id" {
 }
 
 output "public-ip-address" {
-  value = aws_instance.example-1.public_ip
+  value = aws_instance.webserver-1.public_ip
 }
+
