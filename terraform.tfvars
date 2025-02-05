@@ -1,12 +1,1 @@
-vpc_cidr_block = "10.0.0.0/16"
-region = "us-east-1"
-public_subnet_cidr_block = "10.0.0.0/24"
-private_subnet_cidr_block = "10.0.1.0/24"
-public_subnet_az = "us-east-1a"
-private_subnet_az = "us-east-1b"
-aws_s3_bucket = "terraform-project-bucket-1995"
-ec2_instance_ami = "ami-04b4f1a9cf54c11d0"
-ec2_instance_type = "t2.micro"
-load_balancer_name = "my-load-balancer"
-load_balancer_type = "application"
-aws_lb_target_group_name = "my-target-group"
+
