@@ -22,5 +22,5 @@ output "public-ip-address-2" {
 }
 
 output "load_balancer_dns" {
-  value = aws_lb.my-load-balancer.dns_name
+  value = aws_lb.myalb.dns_name
 }
