@@ -52,7 +52,26 @@ terraform apply --auto=approve
 terraform destroy               // destroys the resources
 ```
 
+## End output
 
+* An IAM User is created with necessary permissions to create all the below resources through terraform script.
+* I logged in as IAM user, created an EC2 instance which is the base server to install and run terraform scripts to create different AWS resource.
+* Created a VPC, Public and private subnet
+   * VPC (Virtual Private Cloud): A virtual network dedicated to your AWS account.
+   * Public Subnet: A subnet within the VPC that allows incoming traffic from the internet.
+   * Private Subnet: A subnet within the VPC that does not allow incoming traffic from the internet.
+   * Internet Gateway: A gateway that connects your VPC to the internet. 
+* A Security Group: A virtual firewall that controls incoming and outgoing traffic to your EC2 instances is created.
+* S3 Bucket: An object storage bucket that can store files and data is created.
 
+2 EC2 instances are created
+* EC2 Instance 1 (webserver-1): A virtual server that runs in the public subnet.
+* EC2 Instance 2 (webserver-2): A virtual server that runs in the private subnet.
 
+**Load Balancing Resources**
+  * Application Load Balancer (ALB): A load balancer that distributes incoming traffic to multiple EC2 instances.
+  * Target Group: A logical group of EC2 instances that receive traffic from the ALB.
+  * Listener: A configuration that defines how the ALB routes traffic to the target group.
+
+Application can be accessed using load balancer DNS name and we can check how the traffic is getting routed to different EC2 instance. 
 
